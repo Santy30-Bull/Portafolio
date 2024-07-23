@@ -2,12 +2,12 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #fff;
+    color: #000;
 }
 
 header {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -21,13 +21,13 @@ header button {
     padding: 10px 20px;
     margin: 5px;
     background-color: #fff;
-    color: #333;
+    color: #000;
     border: none;
     cursor: pointer;
 }
 
 header button:hover {
-    background-color: #ddd;
+    background-color: #eee;
 }
 
 .container {
@@ -42,7 +42,7 @@ header button:hover {
     align-items: stretch;
 }
 
-#experience {
+#experience, #about {
     width: 48%;
     background-color: #fff;
     padding: 20px;
@@ -50,16 +50,23 @@ header button:hover {
     border: 1px solid #ddd;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin: 0 5%;
 }
 
-#about{
-    width: 48%;
-    background-color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    flex-direction: column;
+#about {
+    width: 60%; 
+    margin: 0 auto; 
+}
+
+#about h1 {
+    font-size: 2em;
+    margin-bottom: 20px; 
+}
+
+#about p {
+    font-size: 1.1em; 
+    line-height: 1.6; 
+    margin: 0 0 20px; 
 }
 
 h1, h2, h3 {
@@ -86,25 +93,26 @@ section {
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    background-color: #333;
+    padding: 10px 0;
+    background-color: #000;
     color: #fff;
     margin-top: 20px;
 }
 
 footer p {
     margin: 5px 0;
+    color: #fff;
 }
 
 button {
     padding: 10px 20px;
     margin: 5px;
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #555;
-}
+
+
