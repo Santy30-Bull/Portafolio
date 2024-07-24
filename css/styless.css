@@ -24,6 +24,7 @@ header button {
     color: #000;
     border: none;
     cursor: pointer;
+    border-radius: 3px;
 }
 
 header button:hover {
@@ -66,7 +67,6 @@ header button:hover {
 }
 
 
-
 #about h1 {
     font-size: 2em;
     margin-bottom: 20px; 
@@ -78,7 +78,7 @@ header button:hover {
     margin: 0 0 20px; 
 }
 
-h1, h2, h3 {
+h1, h2, h3{
     margin: 0 0 10px;
 }
 
@@ -123,5 +123,24 @@ button {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+#Nombre,#Habilidades,#Educacion {
+    font-size: 3em;
+    display: inline-block;
+    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow 5s linear infinite;
+    background-size: 400%;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 100%;
+    }
+}
 
 

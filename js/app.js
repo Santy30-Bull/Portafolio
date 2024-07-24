@@ -1,9 +1,14 @@
 // Función para inicializar eventos
 function initializeButtons() {
+    /*Botones Principales*/
     var skillsButton = document.getElementById('skills-button');
     var educationButton = document.getElementById('education-button');
     var indexButton = document.getElementById('index-button');
+    
+    /*Funcionalidades extra */
     var FotoPerfil = document.getElementById('FotoPerfil');
+    var Email = document.getElementById('email');
+    
 
     if (educationButton) {
         educationButton.onclick = function () {
@@ -54,6 +59,11 @@ function initializeButtons() {
         };
         FotoPerfil.onclick = function () {
             window.open("https://github.com/Santy30-Bull", "_blank");
+        };
+    }
+    if (Email){
+        Email.onclick = function () {
+            window.open("https://www.linkedin.com/in/santiago-augusto-toro-bonilla-727093286/", "_blank");
         };
     }
 }
