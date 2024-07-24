@@ -3,22 +3,8 @@ function initializeButtons() {
     var skillsButton = document.getElementById('skills-button');
     var educationButton = document.getElementById('education-button');
     var indexButton = document.getElementById('index-button');
-    if (skillsButton) {
-        skillsButton.onclick = function () {
-            window.location.href = 'skills.html';
-        };
-        skillsButton.onmouseover = function () {
-            skillsButton.style.transform = "scale(1.1)";
-            skillsButton.style.backgroundColor = "#555";
-        };
-        skillsButton.onmouseout = function () {
-            skillsButton.style.transform = "scale(1)";
-            skillsButton.style.backgroundColor = "#fff";
-        };
-        educationButton.onmousedown = function () {
-            educationButton.style.transform = "scale(0.9)";
-        };
-    }
+    var FotoPerfil = document.getElementById('FotoPerfil');
+
     if (educationButton) {
         educationButton.onclick = function () {
             window.location.href = 'education.html';
@@ -31,12 +17,23 @@ function initializeButtons() {
             educationButton.style.transform = "scale(1)";
             educationButton.style.backgroundColor = "#fff";
         };
-        educationButton.onmousedown = function () {
-            educationButton.style.transform = "scale(0.9)";
+    }
+    if (skillsButton) {
+        skillsButton.onclick = function () {
+            window.location.href = 'skills.html';
+        };
+        skillsButton.onmouseover = function () {
+            skillsButton.style.transform = "scale(1.1)";
+            skillsButton.style.backgroundColor = "#555";
+        };
+        skillsButton.onmouseout = function () {
+            skillsButton.style.transform = "scale(1)";
+            skillsButton.style.backgroundColor = "#fff";
         };
     }
     if (indexButton) {
         indexButton.onclick = function () {
+            console.log('Botón indexButton clickeado');
             window.location.href = 'index.html';
         };
         indexButton.onmouseover = function () {
@@ -47,8 +44,16 @@ function initializeButtons() {
             indexButton.style.transform = "scale(1)";
             indexButton.style.backgroundColor = "#fff";
         };
-        indexButton.onmousedown = function () {
-            indexButton.style.transform = "scale(0.9)";
+    }
+    if (FotoPerfil) {
+        FotoPerfil.onmouseover = function () {
+            FotoPerfil.style.transform = "scale(1.1)";
+        };
+        FotoPerfil.onmouseout = function () {
+            FotoPerfil.style.transform = "scale(1)";
+        };
+        FotoPerfil.onclick = function () {
+            window.open("https://github.com/Santy30-Bull", "_blank");
         };
     }
 }
