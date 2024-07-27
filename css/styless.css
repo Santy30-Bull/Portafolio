@@ -39,8 +39,8 @@ header button:hover {
 
 .flex-container {
     display: flex;
-    justify-content: flex-start; /* Cambiado para que los contenedores estén alineados al inicio */
-    align-items: flex-start; /* Alinea los elementos al inicio del eje transversal */
+    justify-content: flex-start; /* Alineación al inicio */
+    align-items: flex-start; /* Alineación transversal al inicio */
 }
 
 .image-container {
@@ -66,19 +66,18 @@ header button:hover {
     margin: 0; /* Elimina el margen lateral */
 }
 
-
 #about h1 {
     font-size: 2em;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 #about p {
-    font-size: 1.1em; 
-    line-height: 1.6; 
-    margin: 0 0 20px; 
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0 0 20px;
 }
 
-h1, h2, h3{
+h1, h2, h3 {
     margin: 0 0 10px;
 }
 
@@ -123,7 +122,13 @@ button {
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-#Nombre,#Habilidades,#Educacion {
+#FotoPerfil {
+    transition: transform 0.5s ease, background-color 0.5s ease;
+    cursor: pointer; /* Cambiado para que el cursor cuando se pare encima se ponga puntero */
+    -webkit-user-drag: none; /* Evita poder arrastrar imagenes */
+}
+
+#Nombre, #Habilidades, #Educacion {
     font-size: 3em;
     display: inline-block;
     background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
@@ -143,4 +148,106 @@ button {
     }
 }
 
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
 
+.skill {
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.6s ease, transform 0.6s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.skill img {
+    display: none;
+    max-width: 80%;
+    max-height: 80%;
+    -webkit-user-drag: none; /* Evita poder arrastrar imagenes */
+}
+
+.skill:hover img {
+    display: block;
+}
+
+.skill:hover span {
+    display: none;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #about {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #Nombre, #Habilidades, #Educacion {
+        font-size: 2em;
+    }
+
+    .skills-container {
+        gap: 15px;
+    }
+
+    .skill {
+        width: 80px;
+        height: 80px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    header button {
+        padding: 5px 10px;
+    }
+
+    #Nombre, #Habilidades, #Educacion {
+        font-size: 1.5em;
+    }
+
+    .skills-container {
+        gap: 10px;
+    }
+
+    .skill {
+        width: 60px;
+        height: 60px;
+        font-size: 0.8em;
+    }
+}
+
+#CenterSkills,#SkillsTitulo {
+    text-align: center;
+}

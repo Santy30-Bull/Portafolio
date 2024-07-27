@@ -66,6 +66,37 @@ function initializeButtons() {
             window.open("https://www.linkedin.com/in/santiago-augusto-toro-bonilla-727093286/", "_blank");
         };
     }
+
+    // Funcionalidad para mostrar logos en los contenedores de habilidades
+    const skills = [
+        { id: 'skill-html', imgSrc: '/img/Icons/htmlLogo.png' },
+        { id: 'skill-css', imgSrc: '/img/Icons/cssLogo.png' },
+        { id: 'skill-sqlserver', imgSrc: '/img/Icons/sqlServerLogo.png' },
+        { id: 'skill-java', imgSrc: 'img/Icons/JavaLogo.png' },
+        { id: 'skill-git', imgSrc: 'img/Icons/GitLogo.png' },
+        { id: 'skill-csharp', imgSrc: 'img/Icons/CsharpLogo.png' }
+    ];
+
+    skills.forEach(skill => {
+        const skillElement = document.getElementById(skill.id);
+        const skillText = skillElement.innerHTML;
+        skillElement.innerHTML = `<span>${skillText}</span><img src="${skill.imgSrc}" alt="${skillText} logo">`;
+
+        skillElement.addEventListener('mouseover', function() {
+            const img = this.querySelector('img');
+            img.style.display = 'block';
+            const span = this.querySelector('span');
+            span.style.display = 'none';
+        });
+
+        skillElement.addEventListener('mouseout', function() {
+            const img = this.querySelector('img');
+            img.style.display = 'none';
+            const span = this.querySelector('span');
+            span.style.display = 'block';
+        });
+    });
 }
+
 // Inicializar eventos cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', initializeButtons);
