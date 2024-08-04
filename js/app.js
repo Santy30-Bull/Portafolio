@@ -74,7 +74,8 @@ function initializeButtons() {
         { id: 'skill-sqlserver', imgSrc: '/img/Icons/sqlServerLogo.png' },
         { id: 'skill-java', imgSrc: 'img/Icons/JavaLogo.png' },
         { id: 'skill-git', imgSrc: 'img/Icons/GitLogo.png' },
-        { id: 'skill-csharp', imgSrc: 'img/Icons/CsharpLogo.png' }
+        { id: 'skill-js', imgSrc: 'img/Icons/JsLogo.png' },
+        { id: 'skill-csharp', imgSrc: 'img/Icons/CsharpLogo.png' },
     ];
 
     skills.forEach(skill => {

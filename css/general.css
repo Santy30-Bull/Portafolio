@@ -39,31 +39,57 @@ header button:hover {
 
 .flex-container {
     display: flex;
-    justify-content: flex-start; /* Alineación al inicio */
-    align-items: flex-start; /* Alineación transversal al inicio */
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .image-container {
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
-    flex-shrink: 0; /* Evita que el contenedor de la imagen se reduzca */
+    margin-right: 20px;
+    flex-shrink: 0;
 }
 
 .image-container img {
-    max-width: 100%; /* Ajusta el tamaño de la imagen al 100% del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    max-height: 300px; /* Ajusta según tus necesidades */
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
 }
 
 #about {
-    flex-grow: 1; /* Permite que el contenedor 'about' crezca para ocupar el espacio disponible */
-    max-width: 800px; /* Limita el ancho máximo del contenedor */
+    flex-grow: 1;
+    max-width: 800px;
     background-color: #fff;
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid #ddd;
     display: flex;
     flex-direction: column;
-    margin: 0; /* Elimina el margen lateral */
+    margin: 0;
+}
+
+#education {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.education-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 20px); /* Dos columnas con un espacio de 20px entre ellas */
+    box-sizing: border-box;
+}
+
+.education-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    margin: 5px 0;
 }
 
 #about h1 {
@@ -124,8 +150,8 @@ button {
 
 #FotoPerfil {
     transition: transform 0.5s ease, background-color 0.5s ease;
-    cursor: pointer; /* Cambiado para que el cursor cuando se pare encima se ponga puntero */
-    -webkit-user-drag: none; /* Evita poder arrastrar imagenes */
+    cursor: pointer;
+    -webkit-user-drag: none;
 }
 
 #Nombre, #Habilidades, #Educacion {
@@ -176,7 +202,7 @@ button {
     display: none;
     max-width: 80%;
     max-height: 80%;
-    -webkit-user-drag: none; /* Evita poder arrastrar imagenes */
+    -webkit-user-drag: none;
 }
 
 .skill:hover img {
@@ -221,6 +247,10 @@ button {
         width: 80px;
         height: 80px;
         font-size: 0.9em;
+    }
+
+    .education-item {
+        flex-basis: calc(100% - 20px); /* Una columna en pantallas más pequeñas */
     }
 }
 
